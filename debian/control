@@ -1,0 +1,21 @@
+Source: fvs
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               pybuild-plugin-pyproject,
+               dh-python,
+               python3-all-dev,
+               python3-setuptools,
+               libyaml-dev (>= 0.2.2~),
+               cython3,
+               python3-orjson
+Rules-Requires-Root: no
+Standards-Version: 4.6.1
+Homepage: https://github.com/mirkobrombin/FVS
+
+Package: python3-fvs
+Architecture: any
+Multi-Arch: allowed
+Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}, python3-orjson
+Description: File Versioning System with hash comparison, deduplication and data storage to create unlinked states that can be deleted 
